@@ -20,9 +20,9 @@ const Character = (props) => {
         }
         return caracteres.join("");
     }
-
+     {/*eslint-disable-next-line react/prop-types*/}
     const data = props.data
-
+     {/*eslint-disable-next-line react/prop-types*/}
     getIdForString(data.origin.url)
 
     return (
@@ -39,13 +39,17 @@ const Character = (props) => {
                 </div>
                 <div className="character-alive">
                 {<BsCircle />}
+                 {/*eslint-disable-next-line react/prop-types*/}
                 <p> {data.status} - {data.species}.  {data.type}</p>
                 </div>
                 <p>Origin:</p>
+                 {/*eslint-disable-next-line react/prop-types*/}
                 <Link to={`../location/${getIdForString(data.origin.url)}`} className="custom-link"><p className="character-p">{data.origin.name}</p></Link>
                 <p> Last know location:</p>
+                 {/*eslint-disable-next-line react/prop-types*/}
                 <Link to={`../location/${getIdForString(data.location.url)}`} className="custom-link" ><p className="character-p">{data.location.name}</p></Link>
 
+                 {/*eslint-disable-next-line react/prop-types*/}
                 <Link to={`/character/${data.id}`}><p>Mas detalles</p> </Link>
             </div>
         </div>

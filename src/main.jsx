@@ -9,7 +9,7 @@ import EpisodeDetails from './components/Episodes/EpisodeDetails.jsx'
 import ListLocation from './components/Locations/ListLocation.jsx'
 import LocationDetails from './components/Locations/LocationDetails.jsx'
 import NotFound from './components/NotFound/NotFound.jsx'
-import App from './App.jsx'
+//import App from './App.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(

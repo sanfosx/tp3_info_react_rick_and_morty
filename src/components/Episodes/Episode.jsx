@@ -20,6 +20,7 @@ const Episode = (props) => {
             <h2>{props.data.name}</h2>
             {/*eslint-disable-next-line react/prop-types*/}
             <h5>{props.data.air_date}</h5>
+             {/*eslint-disable-next-line react/prop-types*/}
             <Link to={`../episode/${props.data.id}`}><p>Ver mas</p> </Link>
         </div>
     )

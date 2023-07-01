@@ -8,6 +8,7 @@ const Location = (props) => {
     const [addFav, setAddFav] = useState(false)
 
     return (
+        
         <div className="card-ubicaciones" onClick={ ()=> <Link to={`../location/${props.data.id}`}></Link>}>
             <div className="card-ubicaciones-tittle">
                 {/*eslint-disable-next-line react/prop-types*/}
@@ -20,6 +21,7 @@ const Location = (props) => {
             <h2>{props.data.name}</h2>
             {/*eslint-disable-next-line react/prop-types*/}
             <p>{props.data.dimension}</p>
+             {/*eslint-disable-next-line react/prop-types*/}
             <Link to={`../location/${props.data.id}`}className="end-card"><p>Ver mas</p> </Link>
             
         </div>
