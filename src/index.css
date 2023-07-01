@@ -50,8 +50,14 @@ h1 {
   }
 }
 */
-
-
+h1{
+  margin: 10px;
+  color: orangered;
+}
+.main-container{
+  margin-top: 100px; /* Ajusta la altura de tu Navbar según corresponda */
+  margin-bottom: 60px; /* Ajusta la altura de tu Footer según corresponda */
+}
 
 .pagination{
   display: flex;

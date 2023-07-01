@@ -8,19 +8,19 @@ const ListCharacters = () => {
 
     const { data, loading, error } = useRickAndMortyAPI(apiUrl);
     const [pages, setPages] = useState(1)
-   
-    const prevPage = ()=>{
-        if(pages > 1){
-            setPages(pages-1)
+
+    const prevPage = () => {
+        if (pages > 1) {
+            setPages(pages - 1)
             setApiUrl(data.info.prev)
-        } 
+        }
     }
 
-    const nextPage = ()=>{
-        if(pages < data.info.pages){
-            setPages(pages+1)
+    const nextPage = () => {
+        if (pages < data.info.pages) {
+            setPages(pages + 1)
             setApiUrl(data.info.next)
-        }   
+        }
     }
 
     if (loading) {
@@ -32,20 +32,20 @@ const ListCharacters = () => {
     }
 
     return (
-        <>
-        <div className="list-characters">
-            {data && data.results.map(character => (
-                 <Character key={character.id} data={character}></Character>
-                
-            ))}
+        <div className="main-container">
+            <div className="list-characters">
+                {data && data.results.map(character => (
+                    <Character key={character.id} data={character}></Character>
+
+                ))}
             </div>
             <div className="pagination">
-            <button onClick={() => prevPage() }>Prev</button>
-            <p>{`Pagina ${pages} de ${data.info.pages}`}</p>
-            <button onClick={() =>  nextPage() }>Next</button>
+                <button onClick={() => prevPage()}>Prev</button>
+                <p>{`Pagina ${pages} de ${data.info.pages}`}</p>
+                <button onClick={() => nextPage()}>Next</button>
             </div>
-        
-        </>
+
+        </div>
     );
 }
 

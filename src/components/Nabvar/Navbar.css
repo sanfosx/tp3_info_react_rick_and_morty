@@ -1,3 +1,13 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 5px;
+    z-index: 9999;
+  }
+
 .navbar-container{
     display: flex;
     align-content: space-around;

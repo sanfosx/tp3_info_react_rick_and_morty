@@ -20,7 +20,7 @@ const Location = (props) => {
             <h2>{props.data.name}</h2>
             {/*eslint-disable-next-line react/prop-types*/}
             <h5>{props.data.dimension}</h5>
-            <Link to={`../character/${props.data.id}`}><p>Ver mas</p> </Link>
+            <Link to={`../location/${props.data.id}`}><p>Ver mas</p> </Link>
             
         </div>
     )

@@ -32,7 +32,7 @@ const ListEpisodes = () => {
     }
 
     return (
-        <>
+        <div className="main-container">
             <div className="list-episodes">
                 {data && data.results.map(episode => (
                     <Episode key={episode.id} data={episode}></Episode>
@@ -43,7 +43,7 @@ const ListEpisodes = () => {
                 <p>{`Pagina ${pages} de ${data.info.pages}`}</p>
                 <button onClick={() => nextPage()}>Next</button>
             </div>
-        </>
+        </div>
     );
 }
 

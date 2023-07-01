@@ -33,7 +33,7 @@ const ListLocation = () => {
     }
 
     return (
-        <>
+        <div className="main-container">
             <div className="list-locations">
                 {data && data.results.map(location => (
                     <Location key={location.id} data={location}></Location>
@@ -45,7 +45,7 @@ const ListLocation = () => {
                 <p>{`Pagina ${pages} de ${data.info.pages}`}</p>
                 <button onClick={() => nextPage()}>Next</button>
             </div>
-        </>
+        </div>
     );
 }
 
