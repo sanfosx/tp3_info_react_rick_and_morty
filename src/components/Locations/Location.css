@@ -1,0 +1,38 @@
+.card-ubicaciones-tittle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.card-ubicaciones-tittle h3 {
+
+    margin-top: 10px;
+}
+
+h2,h5{
+    text-align: center;
+}
+
+h2{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.card-ubicaciones {
+    background-color: #f9f9f9;
+    width: 20rem;
+    height: 13rem;
+    border: 1px solid orangered;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.list-locations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+

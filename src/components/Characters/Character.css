@@ -1,0 +1,98 @@
+.card-character {
+    width: 35rem;
+    height: 15rem;
+    display: flex;
+    margin: 15px;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid orangered;
+    text-align: left;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.character-detail {
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    margin-top: 20px;
+
+
+}
+
+p {
+    margin: 5px;
+    padding: 0;
+}
+
+h2 {
+
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.img-character {
+    height: 100%;
+    width: 40%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.iconfav {
+    font-size: xx-large;
+    color: red;
+    text-align: center;
+}
+
+a {
+    text-align: center;
+}
+
+.icon-alive p {
+    font-size: smaller;
+    margin-right: 10px;
+}
+
+.list-characters{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.character-details-container{
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid orangered;
+    margin: 2rem;
+    border-radius: 15px;
+
+}
+
+.character-detail-hero{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.character-detail-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+   align-content:flex-start;
+
+}

@@ -1,0 +1,32 @@
+.navbar-container{
+    display: flex;
+    align-content: space-around;
+    justify-content: center;
+    border: 1px solid black;
+    align-items: center; 
+}
+
+.logo-img{
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 50px;
+    border: 3px solid orangered;
+}
+.logo-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    margin-left: 10px;
+}
+
+.content-links{
+    width: 100%;
+    display: flex;
+    justify-content: space-around; 
+}
+
+.content-links li{
+   list-style-type: none;
+}

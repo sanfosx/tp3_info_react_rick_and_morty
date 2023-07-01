@@ -1,0 +1,75 @@
+.card-episodios {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 14rem;
+    border: 1px solid orangered;
+    background-color: #f9f9f9;
+    justify-content: flex-start;
+    margin: 15px;
+    border-radius: 15px;
+}
+
+.card-episodios-tittle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.card-episodios-tittle h3 {
+    margin-top: 15px;
+    padding-right: 15px;
+}
+
+.list-episodes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem;
+   
+}
+
+.character-detail-img{
+    height: 60px;
+    width: 60px;
+    border: 1px solid orangered;
+    border-radius: 60px;
+    margin: 0.2rem;
+}
+
+.list-character-detail-img{
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.character-detail-container{
+    max-width: 1200px;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid orangered;
+    border-radius: 15px;
+}
+
+.character-detail-container h2{
+    width:100%;
+    margin: 1rem;
+    padding-left: 3rem;
+    text-align: left !important;
+    justify-content: left;
+}
+
+.character-detail-container h1{
+    font-size: 5em;
+}
