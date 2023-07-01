@@ -5,11 +5,13 @@
     height: 14rem;
     border: 1px solid orangered;
     background-color: #f9f9f9;
-    justify-content: flex-start;
+    justify-content: space-around;
     margin: 15px;
     border-radius: 15px;
 }
-
+h5{
+    text-align: center;
+}
 .card-episodios-tittle {
     display: flex;
     justify-content: space-between;
@@ -21,6 +23,10 @@
 .card-episodios-tittle h3 {
     margin-top: 15px;
     padding-right: 15px;
+}
+.card-episodios h2{
+    color: orangered;
+    margin: 8px;
 }
 
 .list-episodes{
@@ -50,7 +56,7 @@
 }
 
 .character-detail-container{
-    max-width: 1200px;
+   
     margin: 2rem;
     display: flex;
     flex-direction: column;

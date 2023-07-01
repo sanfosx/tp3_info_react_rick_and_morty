@@ -19,8 +19,8 @@ const Location = (props) => {
             {/*eslint-disable-next-line react/prop-types*/}
             <h2>{props.data.name}</h2>
             {/*eslint-disable-next-line react/prop-types*/}
-            <h5>{props.data.dimension}</h5>
-            <Link to={`../location/${props.data.id}`}><p>Ver mas</p> </Link>
+            <p>{props.data.dimension}</p>
+            <Link to={`../location/${props.data.id}`}className="end-card"><p>Ver mas</p> </Link>
             
         </div>
     )

@@ -26,10 +26,9 @@ const Character = (props) => {
     getIdForString(data.origin.url)
 
     return (
-        <div className="card-character">
+        <div className="card card-character">
             {/*eslint-disable-next-line react/prop-types*/}
-            <img src={data.image} alt="" className="img-character" />
-
+                <img src={data.image} alt="" className="img-character" />
             <div className="character-detail">
                 <div className="card-title">
                     {/*eslint-disable-next-line react/prop-types*/}
@@ -38,16 +37,18 @@ const Character = (props) => {
                         {addFav ? (<AiFillHeart />) : (<AiOutlineHeart />)}
                     </p>
                 </div>
-                <p className="character-alive"> {<BsCircle />}{data.status} - {data.species}.  {data.type}</p>
+                <div className="character-alive">
+                {<BsCircle />}
+                <p> {data.status} - {data.species}.  {data.type}</p>
+                </div>
                 <p>Origin:</p>
-                <Link to={`../location/${getIdForString(data.origin.url)}`}><p className="character-p">{data.origin.name}</p></Link>
+                <Link to={`../location/${getIdForString(data.origin.url)}`} className="custom-link"><p className="character-p">{data.origin.name}</p></Link>
                 <p> Last know location:</p>
-                <Link to={`../location/${getIdForString(data.location.url)}`}><p className="character-p">{data.location.name}</p></Link>
+                <Link to={`../location/${getIdForString(data.location.url)}`} className="custom-link" ><p className="character-p">{data.location.name}</p></Link>
 
                 <Link to={`/character/${data.id}`}><p>Mas detalles</p> </Link>
             </div>
         </div>
     )
 }
-
 export default Character

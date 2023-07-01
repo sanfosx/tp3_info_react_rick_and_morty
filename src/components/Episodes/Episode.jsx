@@ -7,7 +7,7 @@ const Episode = (props) => {
     const [addFav, setAddFav] = useState()
 
     return (
-        <div className="card-episodios">
+        <div className="card card-episodios">
            
             <div className="card-episodios-tittle">
                 {/*eslint-disable-next-line react/prop-types*/}

@@ -19,25 +19,26 @@ const LocationDetails = () => {
     }
 
     return (
-        <div>
-            <div key={data.id}>
-               <h1>{data.name}</h1> 
-                <h3>{data.type}</h3>
-                <h4>{data.dimension}</h4>
-
+        <div className="main-container">
+            <div className="character-detail-container">
+                    <h2>{data.type}</h2>
+                    <h1>{data.name}</h1>
+                    <h4>{data.dimension}</h4>
+                
+                <h2>Residentes:</h2>
+                <div className="list-character-detail-img">
+                    {data.details &&
+                        data.details.map(detail => (
+                            <div key={detail.id}>
+                                <Link to={`../character/${detail.id}`}>
+                                    <img src={detail.image} alt="img character" className="character-detail-img" />
+                                </Link>
+                            </div>
+                        ))}
+                </div>
+                <p>{data.url}</p>
+                <p>{data.created}</p>
             </div>
-            <h2>Residentes:</h2>
-            <ul>
-                {data.details &&
-                    data.details.map(detail => (
-                        <div key={detail.id}>
-                            <Link to={`../character/${detail.id}`}><img src={detail.image} alt="img character" /></Link>
-
-                        </div>
-                    ))}
-            </ul>
-            <p>{data.url}</p>
-            <p>{data.created}</p>
         </div>
     );
 }

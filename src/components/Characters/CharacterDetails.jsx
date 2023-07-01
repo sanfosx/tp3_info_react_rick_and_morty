@@ -31,29 +31,41 @@ const CharacterDetails = () => {
     }
 
     return (
-        <div className="character-details-container">
-            <div className="character-detail-hero">
-                <img src={data.image} alt="Img character" />
+        <div className="main-container">
+            <div className="character-details-container">
                 <div className="character-detail-content">
-                    <h1>{data.name}</h1>
-                    <p className="character-alive"> {<BsCircle />}{data.status} - {data.species}.  {data.type}</p>
-                    <p>Origin:</p>
-                    <Link to={`../location/${getIdForString(data.origin.url)}`}><p className="character-p">{data.origin.name}</p></Link>
-                    <p> Last know location:</p>
-                    <Link to={`../location/${getIdForString(data.location.url)}`}><p className="character-p">{data.location.name}</p></Link>
+                    <div className="character-data-content">
+                        <img src={data.image} alt="Img character" />
+                        <div className="character-detail-data">
+                            <h1>{data.name}</h1>
+                            <div className="character-alive"> 
+                            {<BsCircle />} <h2> {data.status} - {data.species}.  {data.type}</h2>
+                            </div>  
+                            <h4>Origin:</h4>
+                            
+                            <Link to={`../location/${getIdForString(data.origin.url)}`} className="custom-link"><h2 >{data.origin.name}</h2></Link>
+                            <h4> Last know location:</h4>
+                            <Link to={`../location/${getIdForString(data.location.url)}`} className="custom-link"><h2>{data.location.name}</h2></Link>
+                        </div>
+                    </div>
+                    <h2>Episodios:</h2>
+                    <div className="episode-detail-container">
+                        {data.details &&
+                            data.details.map(detail => (
+                                <div key={detail.id}>
+                                    <Link to={`../episode/${detail.id}`} className="custom-link">
+                                        <div className="episode-card-detail">
+                                            <h5>{detail.episode} </h5>
+                                            <h4>{detail.name}</h4>
+                                        </div>
+                                    </Link>
+                                </div>
+                            ))}
+                    </div>
+                    <p>{data.url}</p>
+                    <p>{data.created}</p>
                 </div>
             </div>
-            <h2>Episodios:</h2>
-            <ul>
-                {data.details &&
-                    data.details.map(detail => (
-                        <div key={detail.id}>
-                            <Link to={`../episode/${detail.id}`}> {detail.episode} - {detail.name} </Link>
-                        </div>
-                    ))}
-            </ul>
-            <p>{data.url}</p>
-            <p>{data.created}</p>
         </div>
     );
 }
