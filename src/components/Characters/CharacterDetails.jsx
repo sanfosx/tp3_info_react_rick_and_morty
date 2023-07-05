@@ -1,5 +1,6 @@
 
 import { Link, useParams } from 'react-router-dom'
+import Error from '../Error/Error';
 import useRickAndMortyAPI from '../../hooks/useRickAndMortyAPI'
 import { BsCircle } from "react-icons/bs";
 import Loading from '../Loading/Loading';
@@ -28,7 +29,7 @@ const CharacterDetails = () => {
     }
 
     if (error) {
-        return <div>Error: {error}</div>;
+        return <Error error={error}/>;
     }
 
     return (

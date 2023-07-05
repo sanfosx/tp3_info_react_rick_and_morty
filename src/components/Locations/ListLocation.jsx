@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Loading from '../Loading/Loading'
+import Error from '../Error/Error'
 import useRickAndMortyAPI from '../../hooks/useRickAndMortyAPI'
 import Location from './Location'
 import './Location.css'
@@ -30,7 +31,7 @@ const ListLocation = () => {
     }
 
     if (error) {
-        return <div>Error: {error}</div>;
+        return <Error error={error}/>;
     }
 
     return (

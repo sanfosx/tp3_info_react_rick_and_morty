@@ -1,5 +1,6 @@
 
 import { Link, useParams } from 'react-router-dom'
+import Error from '../Error/Error'
 import Loading from '../Loading/Loading'
 import useRickAndMortyAPI from '../../hooks/useRickAndMortyAPI'
 import './Location.css'
@@ -16,7 +17,7 @@ const LocationDetails = () => {
     }
 
     if (error) {
-        return <div>Error: {error}</div>;
+        return <Error error={error}/>;
     }
 
     return (

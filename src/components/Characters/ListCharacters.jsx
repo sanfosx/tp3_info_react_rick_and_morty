@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Character from './Character';
 import Loading from '../Loading/Loading';
+import Error from '../Error/Error';
 import useRickAndMortyAPI from '../../hooks/useRickAndMortyAPI';
 import './Character.css'
 
@@ -29,7 +30,7 @@ const ListCharacters = () => {
     }
 
     if (error) {
-        return <div>Error: {error}</div>;
+        return <Error error={error}/>;
     }
 
     return (

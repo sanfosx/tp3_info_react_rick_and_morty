@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import Loading from '../Loading/Loading'
+import Error from '../Error/Error'
 import useRickAndMortyAPI from '../../hooks/useRickAndMortyAPI'
 import './Episode.css'
 
@@ -13,7 +14,7 @@ const EpisodeDetails = () => {
     }
 
     if (error) {
-        return <div>Error: {error}</div>;
+        return <Error error={error}/>;
     }
 
     return (

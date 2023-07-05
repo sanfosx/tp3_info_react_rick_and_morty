@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Error from '../Error/Error'
 import Loading from '../Loading/Loading'
 import useRickAndMortyAPI from '../../hooks/useRickAndMortyAPI'
 import './Episode.css'
@@ -29,7 +30,7 @@ const ListEpisodes = () => {
     }
 
     if (error) {
-        return <div>Error: {error}</div>;
+        return <Error error={error}/>;
     }
 
     return (
