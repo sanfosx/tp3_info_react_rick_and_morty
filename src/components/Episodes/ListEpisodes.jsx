@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Loading from '../Loading/Loading'
 import useRickAndMortyAPI from '../../hooks/useRickAndMortyAPI'
 import './Episode.css'
 import Episode from './Episode'
@@ -24,7 +25,7 @@ const ListEpisodes = () => {
     }
 
     if (loading) {
-        return <div>Cargando...</div>;
+        return <Loading/>;
     }
 
     if (error) {

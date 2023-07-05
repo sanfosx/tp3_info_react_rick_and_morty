@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Loading from '../Loading/Loading'
 import useRickAndMortyAPI from '../../hooks/useRickAndMortyAPI'
 import Location from './Location'
 import './Location.css'
@@ -25,7 +26,7 @@ const ListLocation = () => {
     }
 
     if (loading) {
-        return <div>Cargando...</div>;
+        return <Loading/>;
     }
 
     if (error) {

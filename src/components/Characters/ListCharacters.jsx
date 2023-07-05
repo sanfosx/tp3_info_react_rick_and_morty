@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Character from './Character';
+import Loading from '../Loading/Loading';
 import useRickAndMortyAPI from '../../hooks/useRickAndMortyAPI';
 import './Character.css'
 
@@ -24,7 +25,7 @@ const ListCharacters = () => {
     }
 
     if (loading) {
-        return <div>Cargando...</div>;
+        return <Loading/>;
     }
 
     if (error) {

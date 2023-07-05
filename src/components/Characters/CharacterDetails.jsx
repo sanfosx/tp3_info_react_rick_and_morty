@@ -2,6 +2,7 @@
 import { Link, useParams } from 'react-router-dom'
 import useRickAndMortyAPI from '../../hooks/useRickAndMortyAPI'
 import { BsCircle } from "react-icons/bs";
+import Loading from '../Loading/Loading';
 import './Character.css'
 const CharacterDetails = () => {
     const { id } = useParams()
@@ -23,7 +24,7 @@ const CharacterDetails = () => {
     }
 
     if (loading) {
-        return <div>Cargando...</div>;
+        return <Loading/>;
     }
 
     if (error) {

@@ -1,5 +1,6 @@
 
 import { Link, useParams } from 'react-router-dom'
+import Loading from '../Loading/Loading'
 import useRickAndMortyAPI from '../../hooks/useRickAndMortyAPI'
 import './Location.css'
 
@@ -11,7 +12,7 @@ const LocationDetails = () => {
     const { data, loading, error } = useRickAndMortyAPI(apiUrl, true, 3);
 
     if (loading) {
-        return <div>Cargando...</div>;
+        return <Loading/>;
     }
 
     if (error) {
