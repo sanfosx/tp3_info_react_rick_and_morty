@@ -1,12 +1,21 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
-import { BsCircle } from "react-icons/bs";
+import { BsRecordFill } from "react-icons/bs";
 import './Character.css'
 
 const Character = (props) => {
     const [addFav, setAddFav] = useState(false)
 
+    const getColor = (status) => {
+        if (status === 'Alive') {
+          return 'green';
+        } else if (status === 'Dead') {
+          return 'red';
+        } else {
+          return 'black';
+        }
+      };
     //Esta funcion lee un string y acumula los ultimos caracteres hasta que encuentr "/" se usa para obtener la url del dato 
     function getIdForString(str) {
         const caracteres = [];
@@ -34,17 +43,18 @@ const Character = (props) => {
                     {/*eslint-disable-next-line react/prop-types*/}
                     <h2>{data.name}</h2>
                     <p onClick={() => setAddFav(!addFav)} className="iconfav">
-                        {addFav ? (<AiFillHeart />) : (<AiOutlineHeart />)}
+                        {addFav ? <AiFillHeart /> : <AiOutlineHeart />}
                     </p>
                 </div>
                 <div className="character-alive">
-                {<BsCircle />}
+               {/*eslint-disable-next-line react/prop-types*/}
+                {<BsRecordFill style={{color: getColor(data.status)}}/>}
                  {/*eslint-disable-next-line react/prop-types*/}
                 <p> {data.status} - {data.species}.  {data.type}</p>
                 </div>
                 <p>Origin:</p>
                  {/*eslint-disable-next-line react/prop-types*/}
-                <Link to={`../location/${getIdForString(data.origin.url)}`} className="custom-link"><p className="character-p">{data.origin.name}</p></Link>
+                <Link to={`../location/${getIdForString(data.origin.url)}`} className="custom-link"> <p className="character-p">{data.origin.name}</p></Link>
                 <p> Last know location:</p>
                  {/*eslint-disable-next-line react/prop-types*/}
                 <Link to={`../location/${getIdForString(data.location.url)}`} className="custom-link" ><p className="character-p">{data.location.name}</p></Link>

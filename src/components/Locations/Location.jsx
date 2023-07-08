@@ -9,6 +9,7 @@ const Location = (props) => {
 
     return (
         
+        // eslint-disable-next-line react/prop-types
         <div className="card-ubicaciones" onClick={ ()=> <Link to={`../location/${props.data.id}`}></Link>}>
             <div className="card-ubicaciones-tittle">
                 {/*eslint-disable-next-line react/prop-types*/}

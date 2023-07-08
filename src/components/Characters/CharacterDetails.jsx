@@ -2,7 +2,7 @@
 import { Link, useParams } from 'react-router-dom'
 import Error from '../Error/Error';
 import useRickAndMortyAPI from '../../hooks/useRickAndMortyAPI'
-import { BsCircle } from "react-icons/bs";
+import { BsRecordFill } from "react-icons/bs";
 import Loading from '../Loading/Loading';
 import './Character.css'
 const CharacterDetails = () => {
@@ -24,6 +24,17 @@ const CharacterDetails = () => {
         return caracteres.join("");
     }
 
+
+    const getColor = (status) => {
+        if (status === 'Alive') {
+          return 'green';
+        } else if (status === 'Dead') {
+          return 'red';
+        } else {
+          return 'black';
+        }
+      };
+
     if (loading) {
         return <Loading/>;
     }
@@ -41,7 +52,7 @@ const CharacterDetails = () => {
                         <div className="character-detail-data">
                             <h1>{data.name}</h1>
                             <div className="character-alive"> 
-                            {<BsCircle />} <h2> {data.status} - {data.species}.  {data.type}</h2>
+                            {<BsRecordFill style={{color: getColor(data.status)}} />} <h2> {data.status} - {data.species}.  {data.type}</h2>
                             </div>  
                             <h4>Origin:</h4>
                             
